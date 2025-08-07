@@ -6,7 +6,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "pdielib.refmap.json",
   "mixins": [
-    "PDIEMixin"
+    "PDIEMixin",
+    "PDIEAccessor"
   ],
   "client": [],
   "server": []

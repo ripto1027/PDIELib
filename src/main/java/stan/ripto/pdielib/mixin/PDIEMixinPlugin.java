@@ -19,10 +19,17 @@ public class PDIEMixinPlugin implements IMixinConfigPlugin {
         return "";
     }
 
+    @SuppressWarnings("RedundantIfStatement")
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
+        if (mixinClassName.equals("stan.ripto.pdielib.mixin.PDIEAccessor")) {
+            return true;
+        }
+
         if (mixinClassName.equals("stan.ripto.pdielib.mixin.PDIEMixin")) {
-            return LoadingModList.get().getModFileById("tconstruct") != null;
+            if (LoadingModList.get().getModFileById("tconstruct") != null) {
+                return true;
+            }
         }
 
         return false;

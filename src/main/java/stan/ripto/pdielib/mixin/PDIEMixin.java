@@ -21,8 +21,6 @@ public class PDIEMixin {
     private static void callPlayerDestroyItemEvent(IToolStackView tool, int amount, LivingEntity entity, InteractionHand hand, CallbackInfoReturnable<Boolean> cir) {
         if (!cir.getReturnValue()) return;
 
-        if (entity instanceof Player player) {
-            ForgeEventFactory.onPlayerDestroyItem(player, player.getItemInHand(hand), hand);
-        }
+        ForgeEventFactory.onPlayerDestroyItem((Player) entity, ((PDIEAccessor) entity).getMainHandItem(), hand);
     }
 }
