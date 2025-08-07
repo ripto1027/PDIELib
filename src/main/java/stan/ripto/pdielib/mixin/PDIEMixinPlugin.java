@@ -1,6 +1,5 @@
 package stan.ripto.pdielib.mixin;
 
-import net.minecraftforge.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -24,15 +23,11 @@ public class PDIEMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.equals("stan.ripto.pdielib.mixin.PDIEAccessor")) {
             return true;
+        } else if (mixinClassName.equals("stan.ripto.pdielib.mixin.PDIEMixin")) {
+            return true;
+        } else {
+            return false;
         }
-
-        if (mixinClassName.equals("stan.ripto.pdielib.mixin.PDIEMixin")) {
-            if (LoadingModList.get().getModFileById("tconstruct") != null) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     @Override
