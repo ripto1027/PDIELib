@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "plugin": "stan.ripto.pdielib.mixin.PDIEMixinPlugin",
+  "minVersion": "0.8",
+  "package": "stan.ripto.pdielib.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "pdielib.refmap.json",
+  "mixins": [
+    "PDIEMixin"
+  ],
+  "client": [],
+  "server": []
+}
