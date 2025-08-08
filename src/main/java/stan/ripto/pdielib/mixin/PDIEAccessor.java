@@ -8,5 +8,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(LivingEntity.class)
 public interface PDIEAccessor {
     @Invoker("getMainHandItem")
-    ItemStack getMainHandItem();
+    ItemStack accessGetMainHandItem();
 }
