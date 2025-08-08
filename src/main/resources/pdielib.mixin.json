@@ -1,5 +1,5 @@
 {
-  "required": true,
+  "required": false,
   "plugin": "stan.ripto.pdielib.mixin.PDIEMixinPlugin",
   "minVersion": "0.8",
   "package": "stan.ripto.pdielib.mixin",
