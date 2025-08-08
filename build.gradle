@@ -52,10 +52,6 @@ minecraft {
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
-
-    mixin {
-        config "${mod_id}.mixin.json"
-    }
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
@@ -125,4 +121,5 @@ tasks.withType(JavaCompile).configureEach {
 
 mixin {
     add sourceSets.main, "${mod_id}.refmap.json"
+    config "${mod_id}.mixin.json"
 }

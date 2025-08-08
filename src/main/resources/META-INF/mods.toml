@@ -38,4 +38,4 @@ license="${mod_license}"
     side="BOTH"
 
 [[mixins]]
-    config="afterbreak.mixins.json"
+    config="${mod_id}.mixins.json"
